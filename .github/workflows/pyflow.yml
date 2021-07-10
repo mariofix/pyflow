@@ -2,16 +2,16 @@ name: pytest
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ stable-py36 ]
   pull_request:
-    branches: [ dev ]
+    branches: [ stable-py36 ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8, 3.9]
+        python-version: [3.6]
         poetry-version: [1.1.7]
       max-parallel: 1
     steps:
